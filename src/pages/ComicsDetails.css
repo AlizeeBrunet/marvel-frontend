@@ -1,0 +1,30 @@
+.comic-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+.comic-details-container img {
+  border-radius: 8px;
+  max-width: 30%; /* Réduction de la taille de l'image */
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.comic-details-container h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.comic-details-container p {
+  font-size: 15px;
+  text-align: center;
+  max-width: 40%; /* controle la largeur du texte */
+  color: white;
+  font-weight: bold;
+  font-style: italic;
+}

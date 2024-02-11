@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+.header,
+.characters-container {
+  background-color: transparent;
+  color: white;
+}

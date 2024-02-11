@@ -1,0 +1,37 @@
+.comics-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+.comic-card {
+  width: calc(20% - 50px);
+  border: 1px solid red;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+  background-color: #ffffff;
+}
+
+.comic-card:hover {
+  transform: translateY(-5px); /* Effet de lévitation au survol */
+}
+.comic-card:hover img {
+  transform: scale(0.9); /* taille de l image change  au survol */
+}
+
+.comic-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.comic-card h2 {
+  font-size: 16px;
+  margin: 10px;
+  color: red;
+  font-weight: bold;
+  font-style: italic;
+}
