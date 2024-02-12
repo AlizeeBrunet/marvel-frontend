@@ -19,10 +19,6 @@ const CharacterDetails = () => {
         setLoading(false);
       })
       .catch((error) => {
-        console.error(
-          "Erreur lors de la récupération des détails du personnage:",
-          error
-        );
         setError(error);
         setLoading(false);
       });
@@ -31,7 +27,7 @@ const CharacterDetails = () => {
   if (loading) return <div>Chargement des détails...</div>;
   if (error)
     return <div>Erreur lors du chargement des détails: {error.message}</div>;
-  if (!character) return <div>Aucun détail trouvé pour ce personnage.</div>;
+  if (!character) return <div>Aucun détail trouvé pour ce personnage</div>;
 
   return (
     <div className="character-details">

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "../pages/ComicsDetails.css";
@@ -12,17 +12,13 @@ const ComicDetails = () => {
   useEffect(() => {
     axios
       .get(
-        `https://site--marvel-backend--htp8z88mdn8c.code.run/comic/5fce19b478edeb0017c944a3`
+        "https://site--marvel-backend--htp8z88mdn8c.code.run/comic/5fce19b478edeb0017c944a3"
       )
       .then((response) => {
         setComic(response.data);
         setLoading(false);
       })
       .catch((error) => {
-        console.error(
-          "Erreur lors de la récupération des détails du comic:",
-          error
-        );
         setError(error);
         setLoading(false);
       });
@@ -33,7 +29,7 @@ const ComicDetails = () => {
     return (
       <div>Erreur lors du chargement des détails du comic: {error.message}</div>
     );
-  if (!comic) return <div>Détails du comic non trouvés.</div>;
+  if (!comic) return <div>Aucun détail trouvé pour ce comic</div>;
 
   return (
     <div className="comic-details-container">

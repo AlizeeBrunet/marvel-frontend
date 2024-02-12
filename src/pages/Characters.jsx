@@ -17,7 +17,6 @@ const Characters = () => {
         setLoading(false);
       })
       .catch((error) => {
-        console.error("Erreur lors de la récupération du Marvel:", error);
         setError(error);
         setLoading(false);
       });
@@ -38,12 +37,10 @@ const Characters = () => {
           className="character-card"
           onClick={() => handleCharacterClick(character.id)}
         >
-          {character.thumbnail && (
-            <img
-              src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-              alt={character.name}
-            />
-          )}
+          <img
+            src={`${character.thumbnail.path}.${character.thumbnail.extension}`}
+            alt={character.name}
+          />
           <h2>{character.name}</h2>
         </div>
       ))}

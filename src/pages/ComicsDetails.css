@@ -23,7 +23,7 @@
 .comic-details-container p {
   font-size: 15px;
   text-align: center;
-  max-width: 40%; /* controle la largeur du texte */
+  max-width: 40%;
   color: white;
   font-weight: bold;
   font-style: italic;
